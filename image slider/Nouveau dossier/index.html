@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="img-click">
+        <div class="container" id="bmi">
+            <h1>BMI Calculator</h1>
+            <div class="input-section">
+                <label for="date">Date:</label>
+                <input type="date" id="date">
+                <br><br>
+                <label for="gender">Gender:</label>
+                <select id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <br><br>
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter your age">
+                <br><br>
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter your weight">
+                <br><br>
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" placeholder="Enter your height">
+                <br><br>
+              
+                
+                <button onclick="calculateBMI()">Calculate BMI</button>
+                <button onclick="saveRecord()">Add Record</button>
+            </div>
+    
+            <div class="result-section">
+                <h3>Your BMI: <span id="bmiResult">--</span></h3>
+                <p id="bmiCategory"></p>
+            </div>
+    
+            <div class="record-section">
+                <h3>Saved Records</h3>
+                <ul id="recordList"></ul>
+            </div>
+        </div>
+    </section>
+    <section class="slideshow-img">
+        <div class="mySlides fade image-container "  style="display: block;" name="Images" id="exercice">
+            <img src="../image-12.png" style="width: 100%;" class="image" >
+            <button class="hover-button" >Click Me!</button>
+            <p class="text">Lorem ipsum dolor sit amet.</p>
+        </div>
+       <div>
+        <div class="mySlides fade image-container" name="Images">
+            <img src="../image-13.png" style="width: 100%;" class="image" >
+            <button class="hover-button" >Click Me!</button>
+            <p class="text">Lorem ipsum dolor sit amet.</p>
+        </div>
+
+       <div>
+        <div class="mySlides fade image-container" name="Images">
+            <img src="../image-14.png" style="width: 100%;" class="image">
+            <button class="hover-button" >Click Me!</button>
+            <p class="text">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="mySlides fade image-container" name="Images">
+            <img src="../image-16.png" style="width: 100%;" class="image">
+            <button class="hover-button" >Click Me!</button>
+            <p class="text">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="mySlides fade image-container image-container" name="Images" >
+            <img src="../image-19.png" style="width: 100%;" class="image">
+            <button onclick="toggleBMISection()" class="hover-button" >Click Me!</button>
+            <p class="text">BMI</p>
+        </div>
+        <button class="prev" onclick="plusSlides(-1)">&#10096;</button>
+        <button class="next" onclick="plusSlides(1)"">&#10097;</button>
+        <br>
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+    </section>
+<script src="main.js"></script>
+</body>
+</html>
